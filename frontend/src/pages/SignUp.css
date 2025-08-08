@@ -1,0 +1,333 @@
+/* SignUp.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.signup-card { /* Changed class name */
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all 0.3s ease-in-out; /* Smoother transition */
+    max-width: 450px; /* Max width for the card */
+    padding: 3px; /* Creates the gradient border effect */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.signup-card2 { /* Changed class name */
+    display: flex;
+    justify-content: center;
+    border-radius: 19px; /* Slightly smaller to show gradient border */
+    transition: all 0.2s ease-in-out; /* Smoother transition */
+    background-color: #171717; /* Inner background */
+    padding: 2rem; /* Reduced inner padding for the form content */
+}
+
+.signup-card:hover .signup-card2 { /* Apply transform to card2 on card hover */
+    transform: scale(0.98);
+    border-radius: 17px; /* Adjust border-radius on hover */
+}
+
+.signup-card:hover {
+    box-shadow: 0px 0px 40px 5px rgba(0, 255, 117, 0.4); /* More prominent shadow on hover */
+}
+
+#signup-heading { /* Changed id */
+    text-align: center;
+    margin: 0.8em 0; /* Adjusted margin for better spacing */
+    color: rgb(255, 255, 255);
+    font-size: 1.7em; /* Slightly smaller heading */
+    font-weight: 700; /* Bolder heading */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle text shadow */
+}
+
+.signup-form { /* Changed class name */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Reduced gap */
+}
+
+.signup-field-group { /* Changed class name */
+    display: grid;
+    grid-template-columns: 1fr; /* Default to single column */
+    gap: 1rem; /* Reduced gap */
+}
+
+@media (min-width: 640px) {
+    .signup-field-group { /* Changed class name */
+        grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+}
+
+.signup-field { /* Changed class name */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.7em; /* Increased gap between icon and input */
+    border-radius: 15px; /* Softer rounded corners */
+    padding: 0.6em; /* Reduced padding */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    outline: none;
+    background-color: #2a2a2a; /* Slightly lighter dark background */
+    box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3); /* Deeper inner shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-field:focus-within { /* Apply focus style to the entire field container */
+    border-color: #00ff75; /* Accent color border on focus */
+    box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 117, 0.2); /* Glow effect */
+}
+
+.signup-input-field { /* Changed class name */
+    width: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    color: #e0e0e0; /* Lighter text color */
+    font-size: 0.95em; /* Slightly smaller font */
+    padding: 0; /* Remove default input padding */
+}
+
+.signup-input-field::placeholder { /* Changed class name */
+    color: #808080; /* Darker placeholder text */
+}
+
+.signup-input-icon { /* Changed class name */
+    height: 1.1em; /* Slightly smaller icon */
+    width: 1.1em;
+    color: #a0a0a0; /* Softer white for icons */
+    transition: color 0.3s ease;
+}
+
+.signup-field:focus-within .signup-input-icon { /* Changed class name */
+    color: #00ff75; /* Accent color for icon on focus */
+}
+
+.signup-password-field { /* Changed class name */
+    position: relative;
+}
+
+.signup-password-toggle-icon { /* Changed class name */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0a0a0;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.signup-password-toggle-icon:hover { /* Changed class name */
+    color: #00ff75;
+}
+
+.signup-btn { /* Changed class name */
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically by default */
+    gap: 0.8rem; /* Reduced gap */
+    margin-top: 0.8rem; /* Reduced margin */
+}
+
+@media (min-width: 640px) {
+    .signup-btn { /* Changed class name */
+        flex-direction: row; /* Side-by-side on larger screens */
+    }
+}
+
+.signup-button1, .signup-button2, .signup-google-signup-button { /* Changed class name */
+    padding: 0.7em 1em; /* Reduced padding */
+    border-radius: 8px; /* Softer rounded corners */
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #2a2a2a;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Make buttons flexible */
+}
+
+.signup-button1 { /* Changed class name */
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    color: #171717;
+    font-weight: 700;
+    margin-top: 0.5rem; /* Space above register button */
+}
+
+.signup-button1:hover { /* Changed class name */
+    background-image: linear-gradient(163deg, #00e66e 0%, #2a00e6 100%);
+    box-shadow: 0px 0px 35px 3px rgba(0, 255, 117, 0.5);
+    transform: translateY(-2px);
+}
+
+.signup-button2 { /* Changed class name */
+    background-color: #2a2a2a;
+}
+
+.signup-button2:hover { /* Changed class name */
+    background-color: #3a3a3a;
+    box-shadow: 0px 0px 20px 2px rgba(55, 0, 255, 0.3);
+    transform: translateY(-1px);
+}
+
+/* Google Sign-up Button */
+.signup-google-signup-button { /* Changed class name */
+    background-color: #db4437; /* Google red */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.signup-google-signup-button:hover { /* Changed class name */
+    background-color: #c23321; /* Darker red on hover */
+    box-shadow: 0px 0px 20px 2px rgba(219, 68, 55, 0.4);
+    transform: translateY(-1px);
+}
+
+.signup-google-icon { /* Changed class name */
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.signup-message { /* Changed class name */
+    padding: 0.7em; /* Reduced padding */
+    border-radius: 0.5em;
+    margin-top: 0.8em; /* Reduced margin */
+    text-align: center;
+    font-size: 0.85em; /* Slightly smaller font */
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.signup-message.success { /* Changed class name */
+    background-color: #28a745;
+    color: #e6ffe6;
+    border: 1px solid #1e7e34;
+}
+
+.signup-message.error { /* Changed class name */
+    background-color: #dc3545;
+    color: #ffe6e6;
+    border: 1px solid #bd2130;
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 1400px) {
+    .signup-card { /* Changed class name */
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .signup-card { /* Changed class name */
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-card { /* Changed class name */
+        max-width: 90%;
+        padding: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .signup-card2 { /* Changed class name */
+        padding: 1.2em; /* Further reduced padding */
+    }
+
+    #signup-heading { /* Changed id */
+        font-size: 1.4em; /* Adjusted heading size */
+        margin: 0.7em 0;
+    }
+
+    .signup-form { /* Changed class name */
+        gap: 0.6em; /* Further reduced gap */
+    }
+
+    .signup-field { /* Changed class name */
+        padding: 0.5em; /* Further reduced padding */
+    }
+
+    .signup-input-icon, .signup-password-toggle-icon, .signup-google-icon { /* Changed class name */
+        height: 1em;
+        width: 1em;
+    }
+
+    .signup-button1, .signup-button2, .signup-google-signup-button { /* Changed class name */
+        flex: none; /* Reset flex-grow */
+        width: 100%;
+        padding: 0.6em; /* Further reduced padding */
+        font-size: 0.9em; /* Slightly smaller font */
+    }
+
+    .signup-message { /* Changed class name */
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 640px) {
+    .signup-card { /* Changed class name */
+        padding: 0.5rem;
+    }
+
+    .signup-card2 { /* Changed class name */
+        padding: 0.8em; /* Further reduced padding */
+    }
+
+    .signup-form { /* Changed class name */
+        gap: 0.4em; /* Further reduced gap */
+    }
+
+    #signup-heading { /* Changed id */
+        font-size: 1.2em;
+    }
+    
+    .signup-field { /* Changed class name */
+        padding: 0.4em; /* Further reduced padding */
+    }
+
+    .signup-input-icon, .signup-password-toggle-icon, .signup-google-icon { /* Changed class name */
+        height: 0.9em;
+        width: 0.9em;
+    }
+
+    .signup-input-field { /* Changed class name */
+        font-size: 0.85em;
+    }
+
+    .signup-message { /* Changed class name */
+        font-size: 0.75em;
+    }
+}
+
+@media (max-width: 480px) {
+    .signup-card { /* Changed class name */
+        border-radius: 18px;
+        max-width: 95%;
+    }
+
+    .signup-card2 { /* Changed class name */
+        border-radius: 15px;
+        padding: 0.6em; /* Further reduced padding */
+    }
+
+    .signup-form { /* Changed class name */
+        border-radius: 20px;
+        padding: 0.6em; /* Further reduced padding */
+    }
+    
+    .signup-button1, .signup-button2, .signup-google-signup-button { /* Changed class name */
+        font-size: 0.8em;
+        padding: 0.5em; /* Further reduced padding */
+    }
+}

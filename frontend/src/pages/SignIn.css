@@ -1,0 +1,369 @@
+body {
+    /* Flexbox properties to center the content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Dark background to match the form theme */
+}
+
+.signin-card { /* Changed class name */
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all 0.3s ease-in-out; /* Smoother transition */
+    max-width: 420px; /* Base max-width for larger screens */
+    padding: 3px; /* Creates the gradient border effect */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.signin-card2 { /* Changed class name */
+    display: flex; /* Ensures the form inside is centered */
+    justify-content: center;
+    border-radius: 19px; /* Slightly smaller to show gradient border */
+    transition: all 0.2s ease-in-out; /* Smoother transition */
+    background-color: #171717; /* Inner background */
+    padding: 2em; /* Inner padding for the form content */
+}
+
+.signin-card:hover .signin-card2 { /* Apply transform to card2 on card hover */
+    transform: scale(0.98);
+    border-radius: 17px; /* Adjust border-radius on hover */
+}
+
+.signin-card:hover {
+    box-shadow: 0px 0px 40px 5px rgba(0, 255, 117, 0.4); /* More prominent shadow on hover */
+}
+
+.signin-form { /* Changed class name */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Increased gap for better spacing */
+    background-color: #171717; /* Form background, same as card2 inner */
+    border-radius: 25px; /* Slightly larger radius for form itself */
+    transition: 0.4s ease-in-out;
+    width: 100%;
+}
+
+#signin-heading { /* Changed id */
+    text-align: center;
+    margin: 1em 0; /* Adjusted margin for better spacing */
+    color: rgb(255, 255, 255);
+    font-size: 1.8em; /* Larger heading */
+    font-weight: 700; /* Bolder heading */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* Subtle text shadow */
+}
+
+.signin-field-group { /* Changed class name */
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Increased gap within field group */
+}
+
+.signin-field { /* Changed class name */
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.7em; /* Increased gap between icon and input */
+    border-radius: 15px; /* Softer rounded corners */
+    padding: 0.7em; /* More padding */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    outline: none;
+    background-color: #2a2a2a; /* Slightly lighter dark background */
+    box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.6), 0 1px 2px rgba(0, 0, 0, 0.3); /* Deeper inner shadow */
+    transition: all 0.3s ease-in-out;
+}
+
+.signin-field:focus-within { /* Apply focus style to the entire field container */
+    border-color: #00ff75; /* Accent color border on focus */
+    box-shadow: inset 1px 3px 8px rgba(0, 0, 0, 0.8), 0 0 15px rgba(0, 255, 117, 0.2); /* Glow effect */
+}
+
+.signin-input-icon { /* Changed class name */
+    height: 1.2em;
+    width: 1.2em;
+    color: #a0a0a0; /* Softer white for icons */
+    transition: color 0.3s ease;
+}
+
+.signin-field:focus-within .signin-input-icon { /* Changed class name */
+    color: #00ff75; /* Accent color for icon on focus */
+}
+
+.signin-password-field { /* Changed class name */
+    position: relative;
+}
+
+.signin-password-toggle-icon { /* Changed class name */
+    position: absolute;
+    right: 1em;
+    cursor: pointer;
+    color: #a0a0a0;
+    transition: color 0.3s ease;
+}
+
+.signin-password-toggle-icon:hover { /* Changed class name */
+    color: #00ff75; /* Accent color on hover */
+}
+
+.signin-input-field { /* Changed class name */
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #e0e0e0; /* Lighter text color */
+    font-size: 1em;
+    padding: 0; /* Remove default input padding */
+}
+
+.signin-input-field::placeholder { /* Changed class name */
+    color: #808080; /* Darker placeholder text */
+}
+
+.signin-form .signin-btn { /* Changed class name */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 1.5em; /* Increased margin */
+    gap: 1em;
+}
+
+.signin-button1, .signin-button2, .signin-forgot-password-button, .signin-google-signin-button { /* Changed class name */
+    padding: 0.8em 1.2em; /* More generous padding */
+    border-radius: 8px; /* Softer rounded corners */
+    border: none;
+    outline: none;
+    transition: all 0.3s ease-in-out; /* Smooth transitions */
+    background-color: #2a2a2a; /* Dark button background */
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle button shadow */
+}
+
+.signin-button1 { /* Changed class name */
+    margin-top: 1em; /* Space above login button */
+    width: 100%; /* Make login button full width */
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%); /* Gradient background */
+    color: #171717; /* Dark text on gradient */
+    font-weight: 700;
+}
+
+.signin-button1:hover { /* Changed class name */
+    background-image: linear-gradient(163deg, #00e66e 0%, #2a00e6 100%); /* Slightly darker gradient on hover */
+    box-shadow: 0px 0px 35px 3px rgba(0, 255, 117, 0.5); /* More intense glow */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.signin-button1:disabled { /* Changed class name */
+    background-image: none; /* Remove gradient when disabled */
+    background-color: #444;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+.signin-button2 { /* Changed class name */
+    flex: 1;
+    background-color: #2a2a2a; /* Dark background */
+}
+
+.signin-button2:hover { /* Changed class name */
+    background-color: #3a3a3a; /* Slightly lighter on hover */
+    box-shadow: 0px 0px 20px 2px rgba(55, 0, 255, 0.3); /* Blue glow */
+    transform: translateY(-1px);
+}
+
+/* Forgot Password Button */
+.signin-forgot-password-button { /* Changed class name */
+    width: 100%;
+    background-color: transparent;
+    color: #a0a0a0; /* Softer color for link */
+    text-decoration: none; /* Remove default underline */
+    padding: 0.2em 0.5em;
+    margin-top: 0.5em;
+    text-align: right;
+    font-weight: 500;
+    font-size: 0.9em; /* Smaller font size */
+    box-shadow: none; /* No shadow for link-like button */
+}
+
+.signin-forgot-password-button:hover { /* Changed class name */
+    color: #00ff75; /* Accent color on hover */
+    background-color: transparent;
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Google Sign-in Button */
+.signin-google-signin-button { /* Changed class name */
+    flex: 1;
+    background-color: #db4437; /* Google red */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.signin-google-signin-button:hover { /* Changed class name */
+    background-color: #c23321; /* Darker red on hover */
+    box-shadow: 0px 0px 20px 2px rgba(219, 68, 55, 0.4); /* Red glow */
+    transform: translateY(-1px);
+}
+
+.signin-google-icon { /* Changed class name */
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.signin-message { /* Changed class name */
+    padding: 0.8em; /* More padding */
+    border-radius: 0.5em;
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.9em; /* Slightly larger font */
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.signin-success { /* Changed class name */
+    background-color: #28a745; /* Deeper green */
+    color: #e6ffe6; /* Lighter text */
+    border: 1px solid #1e7e34;
+}
+
+.signin-error { /* Changed class name */
+    background-color: #dc3545; /* Deeper red */
+    color: #ffe6e6; /* Lighter text */
+    border: 1px solid #bd2130;
+}
+
+
+/* --- Responsive Styles --- */
+@media (max-width: 1200px) {
+    .signin-card { /* Changed class name */
+        max-width: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .signin-card { /* Changed class name */
+        max-width: 90%;
+        padding: 0.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .signin-card2 { /* Changed class name */
+        padding: 1.5em; /* Adjusted inner padding */
+    }
+
+    .signin-form { /* Changed class name */
+        gap: 0.75em; /* Reduced gap for smaller screens */
+    }
+
+    #signin-heading { /* Changed id */
+        font-size: 1.2em; /* Adjusted heading size */
+        margin: 0.8em 0;
+    }
+
+    .signin-field { /* Changed class name */
+        padding: 0.6em;
+    }
+
+    .signin-input-icon, .signin-password-toggle-icon, .signin-google-icon { /* Changed class name */
+        height: 1.1em;
+        width: 1.1em;
+    }
+
+    .signin-form .signin-btn { /* Changed class name */
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0.75em;
+        margin-top: 1.5em;
+    }
+
+    .signin-button1, .signin-button2, .signin-google-signin-button { /* Changed class name */
+        flex: none; /* Reset flex-grow */
+        width: 100%;
+        padding: 0.75em;
+        font-size: 0.95em;
+    }
+
+    .signin-forgot-password-button { /* Changed class name */
+        margin-top: 0.5em;
+        text-align: center; /* Center align on smaller screens */
+        font-size: 0.85em;
+    }
+
+    .signin-message { /* Changed class name */
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        width: 100%;
+    }
+    .signin-card { /* Changed class name */
+        padding: 0.5rem;
+    }
+
+    .signin-card2 { /* Changed class name */
+        padding: 1em;
+    }
+
+    .signin-form { /* Changed class name */
+        gap: 0.5em;
+    }
+
+    #signin-heading { /* Changed id */
+        font-size: 1.3em;
+    }
+    
+    .signin-field { /* Changed class name */
+        padding: 0.5em;
+    }
+
+    .signin-input-icon, .signin-password-toggle-icon, .signin-google-icon { /* Changed class name */
+        height: 1em;
+        width: 1em;
+    }
+
+    .signin-input-field { /* Changed class name */
+        font-size: 0.9em;
+    }
+
+    .signin-message { /* Changed class name */
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        width: 100%;
+    }
+    .signin-card { /* Changed class name */
+        border-radius: 18px;
+        max-width: 100%; /* Adjust max-width for very small screens */
+    }
+
+    .signin-card2 { /* Changed class name */
+        border-radius: 15px;
+        padding: 0.8em;
+    }
+
+    .signin-form { /* Changed class name */
+        border-radius: 20px;
+        padding: 0.8em;
+    }
+    
+    .signin-button1, .signin-button2, .signin-google-signin-button { /* Changed class name */
+        font-size: 0.85em;
+        padding: 0.6em;
+    }
+
+    .signin-forgot-password-button { /* Changed class name */
+        font-size: 0.75em;
+    }
+}

@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 600px; /* Max width for the dashboard card */
+    padding: 1rem; /* Padding around the card */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.dashboard-card {
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 22px;
+    transition: all 0.3s;
+    padding: 3px; /* Gradient border effect */
+}
+
+.dashboard-card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+.dashboard-header {
+    background-color: #171717;
+    border-radius: 19px; /* Slightly smaller to show gradient border */
+    padding: 2em;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.dashboard-card:hover .dashboard-header {
+    transform: scale(0.98);
+    border-radius: 17px; /* Adjust border-radius on hover */
+}
+
+.welcome-heading {
+    font-size: 2.5em;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.2em;
+}
+
+.user-name {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #00ff75; /* Accent color for user name */
+    margin-top: 0;
+}
+
+.dashboard-content {
+    background-color: #171717;
+    padding: 2em;
+    border-bottom-left-radius: 19px;
+    border-bottom-right-radius: 19px;
+    text-align: center;
+    color: #d3d3d3;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.dashboard-message {
+    margin-bottom: 2em;
+}
+
+.logout-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #252525;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logout-button:hover {
+    background-color: #00ff75; /* Green accent on hover */
+    color: #171717;
+    box-shadow: 0 6px 10px rgba(0, 255, 117, 0.4);
+}
+
+.logout-icon {
+    margin-right: 0.5em;
+}
+
+/* --- Responsive Styles --- */
+
+/* For screens smaller than 768px (tablets and large phones) */
+@media (max-width: 768px) {
+    .dashboard-container {
+        max-width: 95%;
+    }
+
+    .dashboard-header, .dashboard-content {
+        padding: 1.5em;
+    }
+
+    .welcome-heading {
+        font-size: 2em;
+    }
+
+    .user-name {
+        font-size: 1.5em;
+    }
+
+    .dashboard-message {
+        font-size: 1em;
+    }
+
+    .logout-button {
+        padding: 0.7em 1.2em;
+        font-size: 0.95em;
+    }
+}
+
+/* For screens smaller than 480px (smaller phones) */
+@media (max-width: 480px) {
+    .dashboard-header, .dashboard-content {
+        padding: 1em;
+    }
+
+    .welcome-heading {
+        font-size: 1.8em;
+    }
+
+    .user-name {
+        font-size: 1.3em;
+    }
+
+    .dashboard-message {
+        font-size: 0.9em;
+    }
+
+    .logout-button {
+        padding: 0.6em 1em;
+        font-size: 0.9em;
+    }
+}
